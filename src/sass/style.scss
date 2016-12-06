@@ -1,0 +1,114 @@
+@charset "UTF-8";
+// Variable
+@import "../bootstrap-lib/bootstrap/variables";
+@import "compass";
+
+//My theme variables
+@import "variables";
+
+// Load and hook Bootstrap Core
+@import "../bootstrap-lib/bootstrap/";
+
+html{
+    background: black;
+}
+
+#background2{
+	background-color: $color;
+	color : $text;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+#background {
+	background-size: cover;
+	background-image : url(fond.jpg);
+	background-attachment : fixed;
+	background-repeat : no-repeat;
+	background-position : fixed;
+}
+
+#background3 {
+	background-image : url(bg_footer.png);
+	background-repeat : repeat;
+}
+#background4 {
+	color : white;
+	background-color : black;
+	margin:0;
+}
+#background5 {
+	color : white;
+	background-color: gray;
+}
+
+p{
+	margin : 0;
+}
+.image {
+	padding-left : 10px;
+	margin-left : auto;
+	margin-right : auto;
+	
+}
+#imageTel {
+	margin-left : auto;
+	margin-right : auto;
+}
+#lien {
+	text-align : center;
+    margin-left: auto;
+    margin-right: auto
+}
+#contenu_accueil {
+	margin-top : 100px;
+}
+#accueil {
+	text-align : center;
+}
+
+#text_accueil {
+	color : white;
+	margin-top : 20px;
+}
+
+#contenu {
+	margin-top : 25px;
+	background-color : $color;
+	text-align : center;
+}
+
+#formulaire {
+	margin-top : 20px;
+	margin-bottom : 20px;
+	background: black;
+    color: white;
+    font-weight: bold;
+    border: 3px solid black;
+}
+
+ #reseau{
+    height : 140px;
+    color: white;
+    padding-top: 50px;
+ }
+.btn{
+    background: black;
+    color: white;
+    font-weight: bold;
+    border: 3px solid black;
+}
+span{
+    border: 3px solid white;
+    padding: 30px 25px 30px 10px;
+    margin: 30px 40px 0 0;
+}
+a:hover{
+    text-decoration: none;
+}
+
+
+
+

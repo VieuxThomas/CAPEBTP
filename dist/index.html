@@ -1,0 +1,109 @@
+<html>
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="flaticon.min.css">
+	<link id="style" rel="stylesheet" href="style-blanc.css">
+	<script>
+        function changeStyle(color){
+            document.getElementById('style').setAttribute('href','style-' + color + '.css');
+        }
+    </script>
+</head>
+<body>
+	<div id="background">
+	<select onchange="changeStyle(this.value)">
+          <option>blanc</option>
+          <option>jaune</option>
+          <option>rose</option>
+          <option>vert</option>
+          <option>bleu</option>
+          <option>orange</option>
+      </select>
+	<div class="container" id="accueil_haut">
+		<div class="row" id="contenu_accueil">
+			<div class="col-md-6" id="lien">
+			
+				<img src="logo.png" alt="logo CAPEB"/>
+				<br/>
+				<p id="text_accueil">Pour votre iPhone ou Android, la CAPEB est <br />plus proche de vous à présent : actualités, <br />formation, boite à outils, notifications, etc.</p>
+				<br/>
+				<a href="https://play.google.com/store/apps/details?id=com.websenso.capeb71" title="Télécharger sur Google Play">
+				<img src="Android.png" class="image" alt="lienGoogleplay">
+				</a>
+				<a href="https://itunes.apple.com/fr/app/capeb-71/id971652081?mt=8" title="Télécharger sur l'app Store">
+				<img src="Apple.png" class="image" alt="lienGoogleplay">
+				</a>
+				
+			</div>
+			<div class="col-md-6">
+				<img src="mockup.png" class="img-responsive" id="imageTel" alt="mockup">
+			</div>
+		</div>
+	</div>
+	</div>
+	<div id="background2">
+	<div class="container">
+		<div class="row" id="contenu">
+			<div class="col-md-12">
+				<p><strong>Besoin d'une présentation rapide par email ? Avec plaisir, saisissez votre email est vous recevrez<br />immédiatement un très joli email.</strong></p>
+				<div class="input-group" id="formulaire">
+
+                <input type="text" class="form-control" id="inputGroupSuccess4" aria-describedby="inputGroupSuccess4Status" required="required" placeholder="Votre mail"/>
+                <span onclick="envoi()" class="input-group-addon btn">Recevoir la présentation</span>
+              </div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div id="background3">
+	<div class="container">
+		<footer>
+          <div class="text-center" id="reseau">
+              <a id="resLogo" title="lien vers le facebook" href="#"><span  class="img-circle flaticon-facebook-logo"></span></a>
+              <a id="resLogo" title="lien vers le twitter" href="#"><span class="img-circle flaticon-twitter-logo-silhouette"></span></a>
+              <a id="resLogo" title="Envoyer un mail" href="#"><span class="img-circle flaticon-close-envelope"></span></a>
+              <a id="resLogo" title="lien vers le rss" href="#"><span class="img-circle flaticon-social-rss"></span></a>
+          </div>
+	</div>
+	</div>
+	<div id="background4">
+	<div class="container">
+          <div class="text-center" id="miw">
+              <p>MIW © 2016</p>
+		  </div>
+	</div>
+	</div>
+	</footer>
+	  <script>
+        function envoi(){
+            var mess = document.createElement("em");
+            var champ = document.getElementById("inputGroupSuccess4");
+            if(champ.value == ""){
+                var text = document.createTextNode("Entrez votre adresse mail");
+                mess.setAttribute("class", "text-center text-danger");
+            }
+            else{
+                var text = document.createTextNode("Merci");
+                mess.setAttribute("class", "text-center text-success");
+            }
+            mess.appendChild(text);
+            var contain = document.getElementById("formu");
+
+            var exist = contain.getElementsByTagName("em");
+            if (exist[0]) {
+                contain.removeChild(exist[0]);
+            }
+
+            contain.insertBefore(mess);
+        }
+      </script>
+</body>
+</html>
