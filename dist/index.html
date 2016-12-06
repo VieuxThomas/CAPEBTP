@@ -82,28 +82,6 @@
 	</div>
 	</div>
 	</footer>
-	  <script>
-        function envoi(){
-            var mess = document.createElement("em");
-            var champ = document.getElementById("inputGroupSuccess4");
-            if(champ.value == ""){
-                var text = document.createTextNode("Entrez votre adresse mail");
-                mess.setAttribute("class", "text-center text-danger");
-            }
-            else{
-                var text = document.createTextNode("Merci");
-                mess.setAttribute("class", "text-center text-success");
-            }
-            mess.appendChild(text);
-            var contain = document.getElementById("formu");
-
-            var exist = contain.getElementsByTagName("em");
-            if (exist[0]) {
-                contain.removeChild(exist[0]);
-            }
-
-            contain.insertBefore(mess);
-        }
-      </script>
+	 
 </body>
 </html>
